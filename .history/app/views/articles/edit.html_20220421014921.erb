@@ -1,0 +1,22 @@
+<h1>Update A New Article</h1>
+<% if @article.errors.any?%>
+  <h2>The following erros prevented the article from being saved</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |msg|%>
+      <%= msg %>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with (model: @articles, local: true), local: true do |f| %>
+  <p>
+    <%= f.label :title, style:"display:block"%>
+    <%= f.text_field :title%>
+  </p>
+  <p>
+    <%= f.label :description, style:"display:block"%>
+    <%= f.text_area :description%>
+  </p>
+  <p>
+    <%= f.submit%>
+  </p>
+<% end %>

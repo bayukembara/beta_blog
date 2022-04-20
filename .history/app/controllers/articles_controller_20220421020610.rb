@@ -13,9 +13,9 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit
+  # def edit
 
-  end
+  # end
 
   def create
     #render plain: params[:articles] #to check the value of data that we want to submit
@@ -28,15 +28,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def update 
-    @article = Article.find(params[:id])
-    if @article.update(params.require(:article).permit(:title, :description))
-      flash[:notice] = "Article was updated sucessfully"
-      redirect_to articles_path
-    else
-      render 'edit'
-    end
-  end
+  # def update 
+
+  # end
 
   # def create
   #   @article = Article.new(article_params)
@@ -70,8 +64,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  # def article_params 
-  #   params.require(:article).permit(:title,:description)
-  # end
+  def article_params 
+    params.require(:article).permit(:title,:description)
+  end
 
 end

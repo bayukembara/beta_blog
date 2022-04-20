@@ -26,17 +26,7 @@ class ArticlesController < ApplicationController
     else
       render 'new'
     end
-  end
 
-  def update 
-    @article = Article.find(params[:id])
-    if @article.update(params.require(:article).permit(:title, :description))
-      flash[:notice] = "Article was updated sucessfully"
-      redirect_to articles_path
-    else
-      render 'edit'
-    end
-  end
 
   # def create
   #   @article = Article.new(article_params)
