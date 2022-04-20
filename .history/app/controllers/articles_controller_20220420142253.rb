@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params.require(:articles).permit(:title, :description))
     if @article.save
       flash[:notice] = "Article was created sucessfully"
-    redirect_to articles_path
+      redirect_to articles_path
     else
       render 'new'
     end

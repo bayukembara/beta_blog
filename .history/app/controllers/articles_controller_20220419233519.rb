@@ -18,14 +18,9 @@ class ArticlesController < ApplicationController
   # end
 
   def create
-    #render plain: params[:articles] #to check the value of data that we want to submit
-    @article = Article.new(params.require(:articles).permit(:title, :description))
-    if @article.save
-      flash[:notice] = "Article was created sucessfully"
-    redirect_to articles_path
-    else
-      render 'new'
-    end
+    # @article = Article.new(article_params)
+
+    render plain: params[:articles] #to check the value of data that we want to submit
 
 
   end

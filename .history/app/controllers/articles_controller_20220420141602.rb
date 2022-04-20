@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:articles] #to check the value of data that we want to submit
     @article = Article.new(params.require(:articles).permit(:title, :description))
     if @article.save
-      flash[:notice] = "Article was created sucessfully"
+      flash[:notice]
     redirect_to articles_path
     else
       render 'new'
