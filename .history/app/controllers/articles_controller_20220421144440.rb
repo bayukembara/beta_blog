@@ -39,10 +39,11 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    if @article.destroy
-      flash[:notice] = "Article was Deleted Successfully"
+    if @article.destroy.find(params[:id])
+      flash[:notice] = "Article was Deleted successfully"
       redirect_to articles_path
+    else
+      render 'destroy'
     end
   end
 

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[show edit update destroy]
+  # before_action :set_article, only: %i[show edit update destroy]
 
   def index 
     @articles = Article.all
@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:articles] #to check the value of data that we want to submit
     @article = Article.new(params.require(:articles).permit(:title, :description))
     if @article.save
-      flash[:notice] = "Article was created successfully"
+      flash[:notice] = "Article was created sucessfully"
     redirect_to articles_path
     else
       render 'new'
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
   def update 
     @article = Article.find(params[:id])
     if @article.update(params.require(:article).permit(:title, :description))
-      flash[:notice] = "Article was updated successfully"
+      flash[:notice] = "Article was updated sucessfully"
       redirect_to articles_path
     else
       render 'edit'
@@ -39,11 +39,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    if @article.destroy
-      flash[:notice] = "Article was Deleted Successfully"
-      redirect_to articles_path
-    end
+    
   end
 
   # def create
