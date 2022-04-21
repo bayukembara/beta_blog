@@ -1,11 +1,17 @@
 <p style="color: green"><%= notice %></p>
 <h1>Articles</h1>
 <table>
+  <table>
+    <thead>
+      <th>
+        <%= link_to 'New Articles', new_articles_path%>
+      </th>
+      <th>
+        <%= link_to 'Home', home_path%>
+      </tr>
+    </thead>
+  </table>
   <thead>
-    <tr>
-      <th><%= link_to "Home",root_path %></th>
-      <th><%= link_to "New article", new_article_path %></th>
-    </tr>
     <tr>
       <th>Title</th>
       <th>Description</th>
