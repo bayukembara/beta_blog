@@ -1,0 +1,16 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+
+.nav-link{
+  color:white !important
+}
+
+a#logo{
+  text-transform: uppercase;
+  float: left;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.7em;
+}
