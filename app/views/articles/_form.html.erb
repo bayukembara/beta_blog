@@ -2,7 +2,7 @@
   <h2>The following erros prevented the article from being saved</h2>
   <ul>
     <% @article.errors.full_messages.each do |msg|%>
-      <%= msg %>
+      <li style="color:red"><%= msg %></li>
     <% end %>
   </ul>
 <% end %>
