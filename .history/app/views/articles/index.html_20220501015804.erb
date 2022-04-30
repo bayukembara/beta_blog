@@ -14,11 +14,11 @@
     <tbody>
       <% @articles.each do |article|%>
         <tr>
-          <td width="20%" class="text-justify"><%= article.title%></td>
-          <td width="71%" class="text-justify"><%= article.description%></td>
-          <td width="2%"><%= link_to "Show", article_path(article),:class=> "btn btn-info mx-auto" %></td>
-          <td width="2%"><%= link_to "Edit", edit_article_path(article),:class=> "btn btn-info mx-auto"%></td>
-          <td width="2%"><%= button_to "Delete", article_path(article),method: :delete ,:class => "btn btn-danger mx-auto" %></td>
+          <td><%= article.title%></td>
+          <td><%= article.description%></td>
+          <td width="5%"><%= link_to "Show", article_path(article),:class=> "btn btn-info mx-auto" %></td>
+          <td width="5%"><%= link_to "Edit", edit_article_path(article),:class=> "btn btn-info mx-auto"%></td>
+          <td width="5%"><%= button_to "Delete", article_path(article),method: :delete ,:class => "btn btn-danger mx-auto" %></td>
         </tr>
       <%end%>
     </tbody>
