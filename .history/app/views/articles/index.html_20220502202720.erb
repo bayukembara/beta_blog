@@ -1,8 +1,8 @@
 <div class="container">
-  <p style="color: green" ><%= notice%></p>
+  <p style="color: green"><%= notice%></p>
   <h1 class="text-center mt-4">Articles</h1>
-  <%= link_to "Home",root_path ,:class => "btn btn-outline-success text-right mb-1"%>
-  <%= link_to "New article", new_article_path ,:class => "btn btn-outline-success ml-5 mb-1 text-right" %>
+  <%= link_to "Home",root_path ,:class => "btn btn-outline-info text-right mb-1"%>
+  <%= link_to "New article", new_article_path ,:class => "btn btn-outline-info ml-5 mb-1 text-right" %>
   <div class="row">
     <% @articles.each do |article|%>
       <div class="col-md-4">
@@ -16,13 +16,13 @@
             <p class="card-text"><%= truncate(article.description,length:50)%></p>
             <div class="row">
               <div class="col-md-4 button-action">
-                <%= link_to "Show", article_path(article),:class=>"btn btn-primary shadow "%>
+                <%= link_to "Show", article_path(article),:class=>"btn btn-primary mx-auto"%>
               </div>
               <div class="col-md-4 button-action">
-                <%= link_to "Edit", edit_article_path(article),:class=>"btn btn-primary shadow "%>
+                <%= link_to "Edit", edit_article_path(article),:class=>"btn btn-primary mx-auto"%>
               </div>
               <div class="col-md-4 button-action">
-                <%= button_to "Delete", article_path(article),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},:class=>"btn btn-primary shadow "%>
+                <%= button_to "Delete", article_path(article),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},:class=>"btn btn-primary mx-auto"%>
               </div>
             </div>
           </div>
