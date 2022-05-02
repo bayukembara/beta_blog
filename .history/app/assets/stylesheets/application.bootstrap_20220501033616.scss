@@ -1,9 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+
 body {
   height: 100%;
-  background-color: gray;
 }
 
 .navbar {
@@ -15,6 +15,7 @@ body {
 
 .nav-link {
   color: whitesmoke !important;
+
 }
 
 a#logo {
@@ -49,11 +50,6 @@ a#logo {
 
 #page-content {
   flex: 1 0 auto;
-}
-
-.col-md-4.button-action {
-  display: flex;
-  justify-content: center;
 }
 
 #sticky-footer {

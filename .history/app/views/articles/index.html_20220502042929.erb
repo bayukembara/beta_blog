@@ -6,7 +6,7 @@
   <div class="row">
     <% @articles.each do |article|%>
       <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="card">
           <div class="card-body">
             <div class="card-title">
               <h2 class="text-center fw-bold"><%= article.title %></h2>
@@ -14,30 +14,19 @@
             <hr>
             <div class="card-subtitle mb-2 text-muted">Programming</div>
             <p class="card-text"><%= truncate(article.description,length:50)%></p>
-            <div class="row">
-              <div class="col-md-4 button-action">
-                <%= link_to "Show", article_path(article),:class=>"btn btn-primary mx-auto"%>
-              </div>
-              <div class="col-md-4 button-action">
-                <%= link_to "Edit", edit_article_path(article),:class=>"btn btn-primary mx-auto"%>
-              </div>
-              <div class="col-md-4 button-action">
-                <%= button_to "Delete", article_path(article),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},:class=>"btn btn-primary mx-auto"%>
-              </div>
-            </div>
           </div>
           <div class="card-footer">
             <div class="row">
               <div class="col">
                 <small>
                   <h6 class="text-center fw-lighter">Created At</h6>
-                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= time_ago_in_words(article.created_at)%></p>
+                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-success fw-lighter"><%= time_ago_in_words(article.created_at)%></p>
                 </small>
               </div>
               <div class="col">
                 <small>
                   <h6 class="text-center fw-lighter">Updated At</h6>
-                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= time_ago_in_words(article.updated_at)%></p>
+                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-success fw-lighter"><%= time_ago_in_words(article.updated_at)%></p>
                 </small>
               </div>
             </div>

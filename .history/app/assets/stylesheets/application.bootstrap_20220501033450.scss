@@ -1,20 +1,21 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+
 body {
   height: 100%;
-  background-color: gray;
 }
 
 .navbar {
   background: #08415C;
-  background: -moz-linear-gradient(top, #08415C 70%, #FFFFFF 100%);
-  background: -webkit-linear-gradient(top, #08415C 70%, #FFFFFF 100%);
-  background: linear-gradient(to bottom, #08415C 70%, #FFFFFF 100%);
+  background: -moz-linear-gradient(top, #08415C 100%, #FFFFFF 80%);
+  background: -webkit-linear-gradient(top, #08415C 100%, #FFFFFF 80%);
+  background: linear-gradient(to bottom, #08415C 100%, #FFFFFF 80%);
 }
 
 .nav-link {
   color: whitesmoke !important;
+
 }
 
 a#logo {
@@ -22,8 +23,8 @@ a#logo {
   float: left;
   letter-spacing: -1px;
   font-weight: bold;
-  color: whitesmoke;
-  text-shadow: -2px 3px 3px black;
+  color: rgb(0, 0, 0);
+  text-shadow: -2px 3px 3px #ffffff;
   font-size: 1.7em;
 }
 
@@ -49,11 +50,6 @@ a#logo {
 
 #page-content {
   flex: 1 0 auto;
-}
-
-.col-md-4.button-action {
-  display: flex;
-  justify-content: center;
 }
 
 #sticky-footer {

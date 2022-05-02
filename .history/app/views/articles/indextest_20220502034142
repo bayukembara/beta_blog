@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th class="text-center">Title</th>
+          <th class="text-center">Description</th>
+          <th class="text-center">Created At</th>
+          <th class="text-center">Updated At</th>
+          <th class="text-center" colspan="3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each do |article|%>
+          <tr>
+            <td  class="text-justify"><%= article.title%></td>
+            <td  class="text-justify"><%= truncate(article.description,length:100)%></td>
+            <td  class="text-center"><%= time_ago_in_words(article.created_at)%></td>
+            <td  class="text-center"><%= time_ago_in_words(article.updated_at)%></td>
+            <td width="2%"><%= link_to "Show", article_path(article),:class=> "btn btn-primary mx-auto" %></td>
+            <td width="2%"><%= link_to "Edit", edit_article_path(article),:class=> "btn btn-primary mx-auto"%></td>
+            <td width="2%"><%= button_to "Delete", article_path(article),method: :delete ,:class => "btn btn-danger mx-auto" %></td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>

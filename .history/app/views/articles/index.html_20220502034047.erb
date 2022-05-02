@@ -1,0 +1,17 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1 class="text-center mt-4">Articles</h1>
+  <%= link_to "Home",root_path ,:class => "btn btn-outline-info text-right mb-1"%>
+  <%= link_to "New article", new_article_path ,:class => "btn btn-outline-info ml-5 mb-1 text-right" %>
+  <div class="row">
+    <%= @articles.each do |article|%>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title"><%= article.title %></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
