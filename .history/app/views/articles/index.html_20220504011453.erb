@@ -5,14 +5,14 @@
   <%= link_to "New article", new_article_path ,:class => "btn btn-outline-success ml-5 mb-1 text-right" %>
   <div class="row">
     <% @articles.each do |article|%>
-      <div class="col-md-4 ">
-        <div class="card mb-2 shadow bg-body rounded">
+      <div class="col-md-4">
+        <div class="card mb-2 shadow p-3 mb-5 bg-white rounded">
           <div class="card-body ">
             <div class="card-title">
-              <h2 class="text-center fw-bold"><%= link_to article.title,article_path(article),:class =>"text-success", :style=>"text-decoration:none" %></h2>
+              <h2 class="text-center fw-bold"><%= article.title %></h2>
             </div>
             <hr>
-            <div class="card-subtitle mb-2 text-light fw-normal fst-italic badge bg-dark">Programming</div>
+            <div class="card-subtitle mb-2 text-muted">Programming</div>
             <p class="card-text"><%= truncate(article.description,length:50)%></p>
             <div class="row">
               <div class="col col-md-4 button-action">
