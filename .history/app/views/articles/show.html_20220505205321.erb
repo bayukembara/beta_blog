@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center">Show Article Details</h1>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>Title: </strong><%=@article.title%></p>
+      <p><strong>Description: </strong><%=@article.description%></p>
+      <p><%= link_to 'Edit', edit_article_path(@article)%></p>
+      <p><%= button_to "Delete", article_path(@article), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p><%= link_to "Back to Article List", articles_path%></p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="text-center">Show Article Details</div>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group mb-3 row">
+        <div class="col-2 col-mb-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

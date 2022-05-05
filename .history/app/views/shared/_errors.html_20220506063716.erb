@@ -1,0 +1,17 @@
+<% if @article.errors.any?%>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <div class="alert-heading">
+      <h4>The following erros prevented the article from being saved</h4>
+    </div>
+    <ul>
+      <% @article.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="text-center">Show Article Details</h1>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>Title: </strong><%=@article.title%></p>
+      <p><strong>Description: </strong><%=@article.description%></p>
+      <p><%= link_to 'Edit', edit_article_path(@article)%></p>
+      <p><%= button_to "Delete", article_path(@article), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p><%= link_to "Back to Article List", articles_path%></p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="text-center">
+        <h3><%= @article.title%></h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="text-center"><%=@article.description%></p>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <h5 class="text-end">Created At 
+          <div class="badge badge-success"><%= time_ago_in_words(@article.created_at)%></div>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
