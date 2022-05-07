@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate__animated animate__fadeInDown">
   <%= render 'layouts/messages'%>
   <h1 class="text-center mt-4">Articles</h1>
   <%= link_to "Home",root_path ,:class => "btn btn-outline-success text-right mb-1"%>
@@ -6,7 +6,7 @@
   <div class="row">
     <% @articles.each do |article|%>
       <div class="col-md-4 ">
-        <div class="card mb-2 shadow bg-body rounded animate__animated animate__fadeInDown">
+        <div class="card mb-2 shadow bg-body rounded">
           <div class="card-body ">
             <div class="card-title">
               <h2 class="text-center fw-bold"><%= link_to article.title,article_path(article),:class =>"text-success", :style=>"text-decoration:none" %></h2>
