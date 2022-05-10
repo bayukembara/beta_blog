@@ -57,12 +57,13 @@ a#logo {
   justify-content: center;
 }
 
-.foo {
+#sticky-footer {
   background: #08415C;
+  color: black;
   background: -moz-linear-gradient(bottom, #ffffff 0%, #08415C 100%);
   background: -webkit-linear-gradient(bottom, #ffffff 0%, #08415C 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #08415C 100%);
-  // flex-shrink: none;
+  flex-shrink: none;
   color: #ffffff;
   height: 80px;
 }
@@ -73,25 +74,4 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 1.3em;
-}
-
-@media (min-width: 768px) {
-  footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-    font-size: 1.3em;
-  }
-}
-
-
-@media (max-width: 576px) {
-  footer {
-    position: relative;
-    height: 80px;
-    bottom: 0;
-    width: 100%;
-    font-size: 1.3em;
-  }
 }

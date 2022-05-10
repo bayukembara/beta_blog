@@ -75,17 +75,6 @@ footer {
   font-size: 1.3em;
 }
 
-@media (min-width: 768px) {
-  footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-    font-size: 1.3em;
-  }
-}
-
-
 @media (max-width: 576px) {
   footer {
     position: relative;
