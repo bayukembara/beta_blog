@@ -64,13 +64,23 @@ a#logo {
   background: linear-gradient(to bottom, #ffffff 0%, #08415C 100%);
   // flex-shrink: none;
   color: #ffffff;
-  height: 50px;
+  height: 80px;
 }
 
 footer {
   position: fixed;
-  height: 50px;
+  height: 100px;
   bottom: 0;
   width: 100%;
   font-size: 1.3em;
+}
+
+@media (min-width: 576px) {
+  footer {
+    position: relative;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.3em;
+  }
 }
