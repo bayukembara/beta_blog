@@ -6,3 +6,6 @@ import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
 
 
+$("#alert-success").fadeTo(2000, 500).slideUp(500, function () {
+  $("#alert-success").slideUp(500)
+})

@@ -5,4 +5,4 @@ import "bootstrap"
 import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
 
-
+console.log("Hello world!");

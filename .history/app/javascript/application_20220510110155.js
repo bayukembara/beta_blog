@@ -6,3 +6,4 @@ import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
 
 
+alert("Hello! I am an alert box");
