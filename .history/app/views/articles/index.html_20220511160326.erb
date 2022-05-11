@@ -36,8 +36,8 @@
               </div>
               <div class="col">
                 <small>
-                  <h6 class="text-center fw-lighter">By</h6>
-                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= article.user.username.capitalize if article.user%></p>
+                  <h6 class="text-center fw-lighter">Updated At</h6>
+                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= time_ago_in_words(article.updated_at)%></p>
                 </small>
               </div>
             </div>

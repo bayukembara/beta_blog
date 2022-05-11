@@ -12,19 +12,14 @@
     <div class="card-footer">
       <div class="row">
         <div class="col">
-          <h6>Created by:</h6>
-          <h5 class="text-start">
-            <%= @article.user.username.upcase if @article.user%>
+          <h5 class="text-start">BY
+            <%= @article.user.username.upper if @article.user%>
           </h5>
         </div>
         <div class="col">
-          <div class="row">
-            <h6 class="text-end">Created
-            </h6>
-            <h5 class="text-end">
-              <div class="badge bg-primary justify-content-end"><%= time_ago_in_words(@article.created_at)%></div>
-            </h5>
-          </div>
+          <h5 class="text-end">Created
+            <div class="badge bg-primary"><%= time_ago_in_words(@article.created_at)%></div>
+          </h5>
         </div>
       </div>
     </div>

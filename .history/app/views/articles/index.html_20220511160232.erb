@@ -12,7 +12,11 @@
               <h2 class="text-center fw-bold"><%= link_to article.title,article_path(article),:class =>"text-success", :style=>"text-decoration:none" %></h2>
             </div>
             <hr>
-            <div class="card-subtitle mb-2 text-light fw-normal fst-italic badge bg-dark">Programming</div>
+            <div class="row">
+              <div class="col col-md-10">
+                <div class="card-subtitle mb-2 text-light fw-normal fst-italic badge bg-dark">Programming</div>
+              </div>
+            </div>
             <p class="card-text"><%= truncate(article.description,length:50)%></p>
             <div class="row">
               <div class="col col-md-4 button-action">
@@ -36,8 +40,8 @@
               </div>
               <div class="col">
                 <small>
-                  <h6 class="text-center fw-lighter">By</h6>
-                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= article.user.username.capitalize if article.user%></p>
+                  <h6 class="text-center fw-lighter">Updated At</h6>
+                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal"><%= time_ago_in_words(article.updated_at)%></p>
                 </small>
               </div>
             </div>

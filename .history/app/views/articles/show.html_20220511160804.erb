@@ -18,13 +18,9 @@
           </h5>
         </div>
         <div class="col">
-          <div class="row">
-            <h6 class="text-end">Created
-            </h6>
-            <h5 class="text-end">
-              <div class="badge bg-primary justify-content-end"><%= time_ago_in_words(@article.created_at)%></div>
-            </h5>
-          </div>
+          <h5 class="text-end">Created
+          </h5>
+          <div class="badge bg-primary"><%= time_ago_in_words(@article.created_at)%></div>
         </div>
       </div>
     </div>
