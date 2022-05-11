@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    # render json: {status: 'success',message:'Loaded articles',data:@articles},status: :ok render JSON
+    render json: {status: 'success',message:'Loaded articles',data:@articles},status: :ok
   end
 
   def show; end

@@ -1,0 +1,20 @@
+<div class="container mt-5 animate__animated animate__fadeInDown">
+  <%= render 'layouts/messages'%>
+  <div class="card">
+    <div class="card-header">
+      <div class="text-center">
+        <h3><%= @article.title%></h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="text-left"><%=simple_format(@article.description)%></p>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <h5 class="text-end">Created
+          <div class="badge bg-primary"><%= time_ago_in_words(@article.created_at)%></div>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,8 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.all
-    # render json: {status: 'success',message:'Loaded articles',data:@articles},status: :ok render JSON
+    # @articles = Article.all
+    render json: {status: 'success',message:'Loaded articles',data:@articles},status: :ok
   end
 
   def show; end
