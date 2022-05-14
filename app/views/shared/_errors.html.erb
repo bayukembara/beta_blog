@@ -1,10 +1,11 @@
-<% if @article.errors.any?%>
+<% if obj.errors.any?%>
   <div class="alert alert-danger alert-dismissible fade show animate__animated animate__shakeX" role="alert">
     <div class="alert-heading">
-      <h4>The following erros prevented the article from being saved</h4>
+      <h4>The following erros prevented the <%= obj.class.name.downcase %> from being saved</h4>
+      <%# obj.class.name.downcase is i  want to get class name in the donwcase format %>
     </div>
     <ul>
-      <% @article.errors.full_messages.each do |msg|%>
+      <% obj.errors.full_messages.each do |msg|%>
         <li><%= msg %></li>
       <% end %>
     </ul>
