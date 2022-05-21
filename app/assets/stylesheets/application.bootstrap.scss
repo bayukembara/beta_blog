@@ -8,10 +8,7 @@ body {
 }
 
 .navbar {
-  background: #08415C;
-  background: -moz-linear-gradient(top, #08415C 70%, #FFFFFF 100%);
-  background: -webkit-linear-gradient(top, #08415C 70%, #FFFFFF 100%);
-  background: linear-gradient(to bottom, #08415C 70%, #FFFFFF 100%);
+  background: #dc3545 !important;
 }
 
 .nav-link {
@@ -38,14 +35,14 @@ a#logo {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  color: gray;
+  color: whitesmoke;
   width: 100%;
 }
 
 .p-jumbo {
   text-transform: uppercase;
   font-size: 1.5em;
-  color: gray;
+  color: whitesmoke;
 }
 
 #page-content {
@@ -58,12 +55,9 @@ a#logo {
 }
 
 .foo {
-  background: #08415C;
-  background: -moz-linear-gradient(bottom, #ffffff 0%, #08415C 100%);
-  background: -webkit-linear-gradient(bottom, #ffffff 0%, #08415C 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, #08415C 100%);
+  background: #dc3545;
   // flex-shrink: none;
-  color: #ffffff;
+  color: #ffffff !important;
   height: 50px;
 }
 
@@ -73,4 +67,6 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 1.3em;
+  font-weight: 500;
+  color: #ffffff !important;
 }
