@@ -1,24 +1,43 @@
 class UsersController < ApplicationController
-before_action :set_user, only: %i[show edit update destroy]
+  before_action :set_user, only: %i[show edit update destroy]
 
-  def index
+  def index; end
 
-  end
-
-  def show
-  end
+  def show; end
 
   def new
     @user = User.new
   end
 
+  def edit; end
+
   def create
     @user = User.new(user_params)
+
     if @user.save
-        flash[:notice] = "User #{@user.username} was created successfully"
-        redirect_to root_path
+
+      flash[:notice] = "User #{@user.username} was created successfully"
+
+      redirect_to root_path
+
     else
-        render 'new'
+
+      render 'new'
+
+    end
+  end
+
+  def update
+    if @user.update(user_params)
+
+      flash[:notice] = "User #{@user.username} was Edited"
+
+      redirect_to root_path
+
+    else
+
+      render 'edit'
+
     end
   end
 
@@ -31,5 +50,4 @@ before_action :set_user, only: %i[show edit update destroy]
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
-
 end
