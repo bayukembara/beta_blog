@@ -28,6 +28,7 @@ gem "jbuilder"
 
 # Animate css
 gem 'animate.css-rails', '~> 3.2'
+gem 'htmlbeautifier'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

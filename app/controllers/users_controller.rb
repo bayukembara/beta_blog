@@ -45,6 +45,7 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+    @articles = @user.articles
   end
 
   def user_params
