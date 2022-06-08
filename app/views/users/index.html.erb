@@ -1,0 +1,43 @@
+<h1 class="text-center mt-4">Beta Blogger</h1>
+<div class="container">
+  <%= render 'layouts/messages',obj: @article%>
+  <%# obj:@article is make a obj in article %>
+  <div class="row">
+    <% @users.each do |user|%>
+      <div class="col-md-4">
+        <div class="card mb-2 shadow bg-body rounded animate__animated animate__fadeInDown">
+          <div class="card-title mt-2">
+            <%# #<div class="text-center fw-bold"><%= link_to article.title,article_path(article),:class =>"text-success", :style=>"text-decoration:none" %>
+            <%= link_to gravatar_for(user)%>
+          </div>
+          <div class="card-body">
+            <%# <div class="card-text"><%= truncate(article.description,length:50)%>
+            <div class="row">
+              <div class="col col-md-12 button-action">
+                <p class="text-center"><%= pluralize(user.articles.count, "article")%></p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col col-md-4 button-action">
+                <%= link_to "View Profile", user, :class=>"btn btn-outline-primary shadow "%>
+              </div>
+              <div class="col col-md-4 button-action">
+                <%= link_to "Edit Profile", edit_user_path(user),:class=>"btn btn-outline-danger shadow"%>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <small>
+                  <h6 class="text-center fw-lighter">Joined At</h6>
+                  <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal">Joined <%= time_ago_in_words(user.created_at)%></p>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
