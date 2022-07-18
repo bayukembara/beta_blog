@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
       flash[:notice] = "User #{@user.username} was Edited"
 
-      redirect_to root_path
+      redirect_to @user
 
     else
 

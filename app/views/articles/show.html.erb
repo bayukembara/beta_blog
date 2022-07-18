@@ -1,28 +1,37 @@
 <div class="container mt-5 animate__animated animate__fadeInDown">
-  <%= render 'layouts/messages'%>
+  <%= render "layouts/messages" %>
   <div class="card">
     <div class="card-header">
       <div class="text-center">
-        <h3><%= @article.title%></h3>
+        <h3><%= @article.title %></h3>
       </div>
     </div>
     <div class="card-body">
-      <p class="text-left"><%=simple_format(@article.description)%></p>
+      <p class="text-left"><%= simple_format(@article.description) %></p>
     </div>
     <div class="card-footer">
       <div class="row">
         <div class="col">
           <h6>Created by:</h6>
-          <h5 class="text-start">
-            <%= @article.user.username.upcase if @article.user%>
-          </h5>
+          <div class="row">
+            <div class="col-2"> 
+              <h5 class="float-start">
+                <%= link_to gravatar_for(@article.user, size: 50), user_path(@article.user) %>
+              </h5>
+              <h6 class="text-start mt-0">
+                <%= @article.user.username.capitalize() if @article.user %>
+              </h6>
+            </div>
+            <div class="col-8 text-start">
+            </div>
+          </div>
         </div>
         <div class="col">
           <div class="row">
             <h6 class="text-end">Created
             </h6>
             <h5 class="text-end">
-              <div class="badge bg-primary justify-content-end"><%= time_ago_in_words(@article.created_at)%></div>
+              <div class="badge bg-primary justify-content-end"><%= time_ago_in_words(@article.created_at) %></div>
             </h5>
           </div>
         </div>
