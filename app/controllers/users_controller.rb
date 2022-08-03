@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
   def index
-  @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 5)
   end
 
   def show; end
@@ -17,29 +17,21 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-
       flash[:notice] = "User #{@user.username} was created successfully"
 
       redirect_to root_path
-
     else
-
-      render 'new'
-
+      render "new"
     end
   end
 
   def update
     if @user.update(user_params)
-
       flash[:notice] = "User #{@user.username} was Edited"
 
       redirect_to @user
-
     else
-
-      render 'edit'
-
+      render "edit"
     end
   end
 

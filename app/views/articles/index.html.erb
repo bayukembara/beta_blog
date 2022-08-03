@@ -1,6 +1,11 @@
 <div class="container">
   <h1 class="text-center mt-4">Articles</h1>
-  <%= link_to "Home",root_path ,:class => "btn btn-outline-success text-right mb-1"%>
-  <%= link_to "New article", new_article_path ,:class => "btn btn-outline-success ml-5 mb-1 text-right" %>
+  <div class="container">
+    <%= link_to "Home",root_path ,:class => "btn btn-outline-success text-right mb-1"%>
+    <%= link_to "New article", new_article_path ,:class => "btn btn-outline-success ml-5 mb-1 text-right" %>
+  </div>
   <%= render 'article'%>
+  <div class="flickr_pagination mt-4">
+    <%= will_paginate @articles, :container => false %>
+  </div>
 </div>

@@ -27,8 +27,9 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Animate css
-gem 'animate.css-rails', '~> 3.2'
-gem 'htmlbeautifier'
+gem "animate.css-rails", "~> 3.2"
+gem "htmlbeautifier"
+gem "will_paginate", "~> 3.3"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -76,9 +77,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 
 gem "ruby-lsp", "~> 0.0.2", :group => :development
-
-
