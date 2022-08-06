@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-  background: #dc3545 !important;
+  background: linear-gradient(to right, #6ee2f5, #6454f0) !important;
 }
 
 .nav-link {
@@ -55,7 +55,7 @@ a#logo {
 }
 
 .foo {
-  background: #dc3545;
+  background: linear-gradient(to right, #6ee2f5, #6454f0);
   // flex-shrink: none;
   color: #ffffff !important;
   height: 50px;
