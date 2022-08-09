@@ -36,9 +36,9 @@
                 <small>
                   <h6 class="text-center fw-lighter">By</h6>
                   <p class="d-flex justify-content-center mb-0 badge rounded-pill bg-secondary fw-normal">
-                  <% if article.user %>
-                    <%= link_to article.user.username.capitalize(), user_path(article.user), :class=> "usertext"%>
-                  <%end%>
+                    <% if article.user %>
+                      <%= link_to article.user.username.capitalize(), user_path(article.user), :class=> "usertext"%>
+                    <%end%>
                   </p>
                 </small>
               </div>

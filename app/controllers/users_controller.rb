@@ -23,6 +23,14 @@ class UsersController < ApplicationController
     else
       render "new"
     end
+    # If you want the registration id to auto login
+    #   if @user.save
+    #   session[:user_id] = @user_id
+    #   flash[:notice] = "User #{@user.username} was created successfully"
+    #   redirect_to login_path
+    # else
+    #   render "new"
+    # end
   end
 
   def update
