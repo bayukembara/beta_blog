@@ -27,14 +27,16 @@
       <div class="d-flex">
         <% if logged_in? %>
           <div class="username me-2 my-auto p-0">
-            <li class="nav-item dropdown" style="list-style:none;">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <li class="nav-item dropdown" style="list-style: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <%= current_user.username.upcase %>
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><%= link_to "View Profile", @user, :class=>"dropdown-item"%></li>
-                <li><%= link_to "Edit Profile", edit_user_path(@user),:class=>"dropdown-item"%></li>
-                <li><%= button_to "Log out",logout_path, method: :delete, class: "dropdown-item"%></li>
+              <ul class="dropdown-menu text-decoration-none" aria-labelledby="navbarDropdown">
+                <% if logged_in? %>
+                  <li><%= link_to "View Profile",user_path(current_user), :class => "dropdown-item"%></li>
+                  <li><%= link_to "Edit Profile",edit_user_path(current_user), :class => "dropdown-item"%></li>
+                  <li><%= button_to "Log out",logout_path, method: :delete, class: "dropdown-item"%></li>
+                <% end %>
               </ul>
             </li>
           </div>
