@@ -1,4 +1,9 @@
-<div class="container mt-2">
-  <h1 class="text-center mt-2 mb-5">Edit Form</h1>
-  <%= render 'form'%>
-</div>
+<% if logged_in? && @user == current_user%>
+  <div class="container mt-2">
+    <%= render 'form'%>
+  </div>
+<% elsif %>
+  <div>
+    <h1 class="text-center mt-5 mb-5">404 Not Found</h1>
+  </div>
+<% end %>

@@ -21,9 +21,11 @@
               <div class="col col-md-4 button-action">
                 <%= link_to "View Profile", user, :class=>"btn btn-outline-primary shadow "%>
               </div>
-              <div class="col col-md-4 button-action">
-                <%= link_to "Edit Profile", edit_user_path(user),:class=>"btn btn-outline-danger shadow"%>
-              </div>
+              <% if logged_in? && user == current_user%>
+                <div class="col col-md-4 button-action">
+                  <%= link_to "Edit Profile", edit_user_path(user),:class=>"btn btn-outline-danger shadow"%>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="card-footer">
